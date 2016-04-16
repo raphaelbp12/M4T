@@ -1,0 +1,14 @@
+<ion-view>
+  <ion-content  class="tabs-top has-tabs" ng-controller="listCtrl">
+    <ion-refresher
+      pulling-text="Pull to refresh..."
+      on-refresh="doRefresh()">
+    </ion-refresher>
+    <ul class="list">
+      <li class="item" ng-repeat="rest in rests">
+        <h3>{{rest.name}}</h3>
+        <p><span class="label label-success">Tel:</span> {{rest.tel}}</p>
+      </li>
+    </ul>
+  </ion-content>
+</ion-view>
